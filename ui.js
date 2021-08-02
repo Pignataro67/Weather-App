@@ -10,4 +10,15 @@ class UI {
     this.dewpoint = document.getElementById('w-dewpoint');
     this.wind = document.getElementById('w-wind');
   }
+
+  paint() {
+    this.location.textContent = weather.display_location.full;
+    this.desc.textContent = weather.weather;
+    this.string.textContent = weather.temperature_string;
+    this.icon.setAttribute('src', weather.icon_url);
+    this.humidity.textContent = `Relative Humidity: ${weather.relative_humidity}`;
+    this.feelslike.textContent = `Feels Like: ${weather.feelslike_string}`;
+    this.dewpoint.textContent = `Dewpoint: ${weather.dewpoint_string}`;
+    this.wind.textContent = `Wind: ${weather.wind_string}`;
+  }
 }
