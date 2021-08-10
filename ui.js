@@ -11,7 +11,7 @@ class UI {
     this.wind = document.getElementById('w-wind');
   }
 
-  paint() {
+  paint(weather) {
     this.location.textContent = weather.display_location.full;
     this.desc.textContent = weather.weather;
     this.string.textContent = weather.temperature_string;
