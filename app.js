@@ -39,12 +39,25 @@ function getWeather() {
 
 try {
   // Produce a ReferenceError
-  myFunction();
+  // myFunction();
+
+  // Produce a TypeError
+  // null.myFunction();
+
+  // Will produce SyntaxError
+  // eval('Hello World');
+
+  // Will produce a URIError
+  decodeURIComponent('%');
+
 } catch(e) {
+  console.log(`{e.name} It's null Donkey!!!`);
   // console.log(e);
-  console.log(e.message);
-  console.log(e.name);
-  console.log(e instanceof ReferenceError);
+  // console.log(e.message);
+  // console.log(e.name);
+  // console.log(e instanceof TypeError);
+} finally {
+  console.log('Finally runs regardless of result...');
 }
 
 console.log('Program continues...');
